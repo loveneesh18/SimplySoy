@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimplySoy - Tofu & Soy Milk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
-            background: linear-gradient(90deg, #4caf50, #2e7d32);
+            background: linear-gradient(90deg, #4caf50, #81c784);
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
         }
         nav {
             display: flex;
             justify-content: center;
             background-color: #333;
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             margin: 0 15px;
@@ -32,48 +44,72 @@
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #4caf50;
+            color: #81c784;
         }
         main {
-            padding: 20px;
+            padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
-            display: grid;
-            gap: 20px;
         }
         section {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4caf50;
         }
         .product-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 30px;
         }
         .product {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             border: 1px solid #ddd;
             border-radius: 10px;
             transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fefefe;
         }
         .product img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
         .product:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        .product h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .product p {
+            color: #555;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px 0;
-            margin-top: 20px;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            header, section, footer {
+                animation: fadeIn 1s ease-in;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
