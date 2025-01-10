@@ -6,59 +6,81 @@
     <title>SimplySoy - Tofu & Soy Milk</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f2f2f2;
             color: #333;
         }
         header {
-            background-color: #4caf50;
+            background: linear-gradient(90deg, #4caf50, #2e7d32);
             color: white;
             padding: 20px;
             text-align: center;
         }
         nav {
-            text-align: center;
-            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #4caf50;
+            color: white;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4caf50;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            gap: 20px;
         }
         section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
             background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             margin-top: 20px;
-        }
-        .product {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .product img {
-            max-width: 150px;
-            margin-right: 20px;
-            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>SimplySoy</h1>
-        <p>Pure, Healthy, and Delicious Soy Products</p>
+        <p>Your Partner in Healthy Living with Premium Soy Products</p>
     </header>
 
     <nav>
@@ -67,70 +89,58 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>
-            At SimplySoy, we are dedicated to producing high-quality soy milk and tofu from premium soybeans. Our mission is to address the prevalent adulteration in dairy products while offering healthier alternatives rich in protein, low in fats, and cholesterol-free.
-        </p>
-        <p>
-            Hygiene and quality are at the core of our manufacturing process. Adhering to FSSAI guidelines, we ensure all raw materials are sourced directly from farmers, and all water used is thoroughly purified. Our commitment to excellence drives us to provide safe and nutritious soy products to our consumers.
-        </p>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                At SimplySoy, we aim to revolutionize the food industry with our premium soy-based products. From sourcing high-quality soybeans to maintaining rigorous hygiene standards, we ensure every product delivers unmatched quality and health benefits.
+            </p>
+            <p>
+                Our mission is to provide a natural, nutritious, and delicious alternative to traditional dairy, promoting a healthier lifestyle for our consumers.
+            </p>
+        </section>
 
-    <section id="products">
-        <h2>Our Products</h2>
-
-        <div class="product">
-            <img src="tofu.jpg" alt="Tofu">
-            <div>
-                <h3>Tofu / Soya Paneer</h3>
-                <p>A versatile and healthy protein source, perfect for a variety of recipes.</p>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://via.placeholder.com/300?text=Tofu" alt="Tofu">
+                    <h3>Tofu / Soya Paneer</h3>
+                    <p>A versatile protein source ideal for various culinary applications.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300?text=Masala+Tofu" alt="Masala Tofu">
+                    <h3>Masala Tofu</h3>
+                    <p>Infused with a rich blend of Indian spices for a flavorful twist.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300?text=Soy+Milk" alt="Soy Milk">
+                    <h3>Soy Milk</h3>
+                    <p>A nutritious, plant-based alternative to dairy milk.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300?text=Soy+Yogurt" alt="Soy Yogurt">
+                    <h3>Soy Yogurt</h3>
+                    <p>Probiotic-rich yogurt, perfect for a healthy and balanced diet.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300?text=Okara" alt="Okara">
+                    <h3>Okara</h3>
+                    <p>A high-fiber soy by-product, excellent for baking and more.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="product">
-            <img src="masala_tofu.jpg" alt="Masala Tofu">
-            <div>
-                <h3>Masala Tofu</h3>
-                <p>Tofu infused with authentic Indian spices, ready to elevate your meals.</p>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="soy_milk.jpg" alt="Soy Milk">
-            <div>
-                <h3>Soy Milk</h3>
-                <p>A nutritious, plant-based milk alternative, rich in protein and calcium.</p>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="soy_yogurt.jpg" alt="Soy Yogurt">
-            <div>
-                <h3>Soy Yogurt / Curd</h3>
-                <p>Delicious and probiotic-rich soy yogurt, perfect for a healthy lifestyle.</p>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="okara.jpg" alt="Okara">
-            <div>
-                <h3>Okara</h3>
-                <p>A high-fiber by-product from soy processing, great for baking and more.</p>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us at:</p>
-        <p><strong>Email:</strong> contact@simplysoy.com</p>
-        <p><strong>Phone:</strong> +91-123-456-7890</p>
-    </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach us via:</p>
+            <p><strong>Email:</strong> contact@simplysoy.com</p>
+            <p><strong>Phone:</strong> +91-123-456-7890</p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 SimplySoy. All rights reserved.</p>
+        <p>&copy; 2025 SimplySoy. All rights reserved. | Designed with care.</p>
     </footer>
 </body>
 </html>
