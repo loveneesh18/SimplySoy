@@ -95,9 +95,7 @@
         }
 
         #about p {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
         .product-list {
@@ -147,15 +145,43 @@
             margin: 0;
         }
 
-        @media (prefers-reduced-motion: no-preference) {
-            header, section, footer {
-                animation: fadeIn 1s ease-in;
-            }
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        form label {
+            font-size: 1em;
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        form input, form textarea, form button {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1em;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #388e3c;
         }
     </style>
 </head>
@@ -219,6 +245,20 @@
             <p>We'd love to hear from you! Reach us via:</p>
             <p><strong>Email:</strong> contact@simplysoy.com</p>
             <p><strong>Phone:</strong> +91-123-456-7890</p>
+
+            <h3>Feedback Form</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" name="feedback" placeholder="Share your thoughts with us" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
 
