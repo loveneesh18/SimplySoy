@@ -13,6 +13,7 @@
             background-color: #f9f9f9;
             color: #333;
         }
+
         header {
             background: linear-gradient(90deg, #4caf50, #81c784);
             color: white;
@@ -20,20 +21,25 @@
             text-align: center;
             position: relative;
         }
+
         header h1 {
             font-size: 3em;
             margin: 0;
         }
+
         header p {
             font-size: 1.2em;
             margin: 10px 0 0;
         }
+
         .logo {
             position: absolute;
             top: 10px;
             left: 10px;
-            max-width: 100px;
+            width: 100px;
+            height: auto;
         }
+
         nav {
             display: flex;
             justify-content: center;
@@ -43,6 +49,7 @@
             top: 0;
             z-index: 1000;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
@@ -50,14 +57,17 @@
             font-weight: bold;
             transition: color 0.3s;
         }
+
         nav a:hover {
             color: #81c784;
         }
+
         main {
             padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
         }
+
         section {
             background: white;
             padding: 30px;
@@ -65,33 +75,37 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 40px;
         }
+
         section h2 {
             font-size: 2em;
             margin-bottom: 20px;
             color: #4caf50;
         }
+
         #about {
-            position: relative;
+            background: url('soybean.jpg') no-repeat center center/cover;
             color: white;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-        }
-        #about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('soybean.jpg') center/cover no-repeat;
-            opacity: 0.7;
-            z-index: -1;
+            padding: 60px 30px;
+            position: relative;
             border-radius: 10px;
         }
+
+        #about h2 {
+            color: white;
+        }
+
+        #about p {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
         .product-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
+
         .product {
             text-align: center;
             padding: 20px;
@@ -100,37 +114,45 @@
             transition: transform 0.3s, box-shadow 0.3s;
             background-color: #fefefe;
         }
+
         .product img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-bottom: 15px;
         }
+
         .product:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
+
         .product h3 {
             font-size: 1.5em;
             color: #333;
         }
+
         .product p {
             color: #555;
         }
+
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
         }
+
         footer p {
             margin: 0;
         }
+
         @media (prefers-reduced-motion: no-preference) {
             header, section, footer {
                 animation: fadeIn 1s ease-in;
             }
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
